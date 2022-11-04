@@ -1,11 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 function About() {
   return (
     <>
-      <Header />
-      <h1>je suis la page About</h1>
+      <Navbar />
     </>
   );
 }

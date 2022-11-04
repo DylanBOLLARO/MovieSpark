@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "../components/Header";
+import Form from "../components/Form";
+import Navbar from "../components/Navbar";
 
 function Home() {
   return (
     <>
-      <Header />
-      <h1>je suis la page Home</h1>
+      <Navbar />
+      <Form />
     </>
   );
 }
