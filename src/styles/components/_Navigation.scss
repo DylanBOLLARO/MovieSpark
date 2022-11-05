@@ -1,7 +1,13 @@
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: $color-3;
+
+  h2 {
+    color: $color-2;
+  }
+
   ul {
     display: flex;
     justify-content: center;
@@ -11,6 +17,7 @@
     a {
       text-decoration: none;
       padding: 10px;
+      color: $color-2;
 
       li {
         color: $color-1;

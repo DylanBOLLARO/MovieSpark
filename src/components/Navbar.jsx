@@ -13,7 +13,7 @@ function Navbar() {
             <Link to="/about">about</Link>
           </li>
         </ul>
-        <h2>Netflix-clone</h2>
+        <h2>MovieSpark</h2>
       </nav>
 
       <Outlet />
