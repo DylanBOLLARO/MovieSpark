@@ -4,33 +4,28 @@ import axios from "axios";
 
 function Form() {
   const [moviesData, setMoviesData] = useState([]);
-  // const subscription = props.source.subscribe();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    // axios
-    //   .get(
-    //     "https://api.themoviedb.org/3/search/movie?api_key=4042816bd1f4f2f97945e11f6932ecd4&query=Avengers"
-    //   )
-    //   .then((res) => setMoviesData(res.data.results));
-
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/popular?api_key=4042816bd1f4f2f97945e11f6932ecd4&language=page=1"
+        search
+          ? `https://api.themoviedb.org/3/search/movie?api_key=4042816bd1f4f2f97945e11f6932ecd4&query=${search}&language=fr-FR`
+          : `https://api.themoviedb.org/3/movie/popular?api_key=4042816bd1f4f2f97945e11f6932ecd4&language=fr-FR&page=1`
       )
       .then((res) => setMoviesData(res.data.results));
-  }, []);
+  }, [search]);
 
   return (
     <div className="affichage">
       <div className="Form">
         <input
           type="text"
-          placeholder="Nom du film"
+          placeholder="Rechercher"
           onChange={(e) => {
-            datamovie = e.target.value;
+            setSearch(e.target.value);
           }}
         />
-        <input type="submit" value="Rechercher" />
       </div>
       <div className="result">
         {moviesData.map((movie) => (

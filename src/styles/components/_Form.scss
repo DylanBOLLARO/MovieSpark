@@ -5,17 +5,12 @@
   padding: 20px;
 
   input[type="text"] {
-    width: 250px;
+    width: 30%;
     height: 50px;
     padding-left: 10px;
     letter-spacing: 1px;
-  }
-
-  input[type="submit"] {
-    width: 250px;
-    height: 50px;
-    padding-left: 10px;
-    letter-spacing: 1px;
+    border-radius: 10px;
+    border: 2px solid $color-3;
   }
 }
 
